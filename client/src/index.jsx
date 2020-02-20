@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PixelCellularLifeCanvas from './components/cellularLife.jsx';
+import CellularLife from './components/cellularLife.jsx';
 
 ReactDOM.render( <CellularLife />, document.getElementById('cellular-life') );
