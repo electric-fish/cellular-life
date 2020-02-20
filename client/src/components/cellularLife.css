@@ -1,0 +1,12 @@
+.global {
+  background-color: #333333;
+  color: #f5f5f5;
+  font-family: 'Roboto Mono', monospace;
+  margin: auto;
+}
+
+.header {
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+}
+
