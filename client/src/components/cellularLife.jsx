@@ -4,6 +4,8 @@ import styles from "./cellularLife.css";
 import Grid from "./grid.jsx";
 import Form from "./form.jsx";
 
+import { gridFunctions } from "./gridFunctions.jsx";
+
 class CellularLife extends React.Component {
   constructor(props) {
     super(props);
@@ -43,14 +45,7 @@ class CellularLife extends React.Component {
   }
 
   iterateGrid() {
-    var data = this.state.gridData;
-
-    for (var i = 0; i < this.state.gridSize; i++) {
-      for (var j = 0; j < this.state.gridSize; j++) {
-        if ()
-      }
-    }
-
+    var data = gridFunctions.iterateGrid(this.state.gridSize, this.state.gridData);
     this.setState({
       gridData: data
     });
