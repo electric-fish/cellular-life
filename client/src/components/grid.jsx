@@ -3,7 +3,7 @@ import styles from "./grid.css";
 
 const GridBlock = ({data}) => {
   return (
-    <span>{data}</span>
+    <span>{data} </span>
   );
 }
 
@@ -22,7 +22,7 @@ const GridRow = ({gridRowData}) => {
 }
 
 const Grid = ({gridSize, gridData}) => {
-  console.log(gridData);
+  // console.log(gridData);
   const gridItems = gridData.map((data) => {
     return (
       <GridRow gridRowData={data} />

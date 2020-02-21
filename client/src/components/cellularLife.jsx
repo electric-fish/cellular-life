@@ -10,7 +10,7 @@ class CellularLife extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      gridSize: 10,
+      gridSize: 4,
       gridData: []
     }
     this.resetGrid = this.resetGrid.bind(this);
@@ -28,12 +28,19 @@ class CellularLife extends React.Component {
       data.push(rowData);
     }
 
-    data[3][4] = 1;
-    data[3][5] = 1;
-    data[3][6] = 1;
-    data[4][3] = 1;
-    data[4][4] = 1;
-    data[4][5] = 1;
+    // data[1][1] = 1;
+    // data[1][2] = 1;
+    // data[1][3] = 1;
+    // data[2][0] = 1;
+    // data[2][1] = 1;
+    // data[2][2] = 1;
+
+    data[0][0] = 1;
+    data[0][1] = 1;
+    data[1][0] = 1;
+    data[2][3] = 1;
+    data[3][2] = 1;
+    data[3][3] = 1;
 
     this.setState({
       gridData: data
