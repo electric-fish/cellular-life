@@ -5,6 +5,7 @@ import Grid from "./grid.jsx";
 import Form from "./form.jsx";
 
 import { gridFunctions } from "./gridFunctions.jsx";
+import { gridDatas } from "./gridDatas.jsx";
 
 class CellularLife extends React.Component {
   constructor(props) {
@@ -19,22 +20,27 @@ class CellularLife extends React.Component {
   }
 
   resetGrid() {
-    var data = [];
+    this.setState({
+      gridData: gridDatas[this.state.selectedBase]
+    });
 
-    for (var i = 0; i < this.state.gridSize; i++) {
-      var rowData = [];
-      for (var j = 0; j < this.state.gridSize; j++) {
-        rowData.push(0);
-      }
-      data.push(rowData);
-    }
+    // var data = new Array(5).fill().map(() => { return new Array(5).fill(0); });
+    // var data = [...new Array(5)].map(() => { return new Array(5).fill(0); });
 
-    data[1][1] = 1;
-    data[1][2] = 1;
-    data[1][3] = 1;
-    data[2][0] = 1;
-    data[2][1] = 1;
-    data[2][2] = 1;
+    // for (var i = 0; i < this.state.gridSize; i++) {
+    //   var rowData = [];
+    //   for (var j = 0; j < this.state.gridSize; j++) {
+    //     rowData.push(0);
+    //   }
+    //   data.push(rowData);
+    // }
+
+    // data[1][1] = 1;
+    // data[1][2] = 1;
+    // data[1][3] = 1;
+    // data[2][0] = 1;
+    // data[2][1] = 1;
+    // data[2][2] = 1;
 
     // data[0][0] = 1;
     // data[0][1] = 1;
@@ -47,9 +53,9 @@ class CellularLife extends React.Component {
     // data[1][1] = 1;
     // data[2][1] = 1;
 
-    this.setState({
-      gridData: data
-    });
+    // this.setState({
+    //   gridData: data
+    // });
   }
 
   componentDidMount() {
