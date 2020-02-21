@@ -11,7 +11,20 @@ class Form extends React.Component {
   render() {
     return (
       <div>
-        <button className={styles.button} onClick={this.props.iterateGrid}>next</button>
+        <div>
+          <button className={styles.button} onClick={this.props.resetGrid}>reset</button>
+          &nbsp;
+          <button className={styles.button} onClick={this.props.iterateGrid}>next</button>
+        </div>
+        <p />
+        <div>
+          <label>Form: </label>
+          <select id="startOptions" className={styles.select} onChange={this.props.switchGrid}>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
       </div>
     );
   }

@@ -17,6 +17,7 @@ class CellularLife extends React.Component {
     }
     this.resetGrid = this.resetGrid.bind(this);
     this.iterateGrid = this.iterateGrid.bind(this);
+    this.switchGrid = this.switchGrid.bind(this);
   }
 
   resetGrid() {
@@ -69,12 +70,19 @@ class CellularLife extends React.Component {
     });
   }
 
+  switchGrid(e) {
+    this.setState({
+      selectedBase: e.target.value,
+      gridData: gridDatas[e.target.value]
+    });
+  }
+
   render() {
     return (
       <div className={styles.global}>
         <h1 className={styles.header}>Life</h1>
         <Grid gridSize={this.state.gridSize} gridData={this.state.gridData} />
-        <Form iterateGrid={this.iterateGrid} />
+        <Form resetGrid={this.resetGrid} iterateGrid={this.iterateGrid} switchGrid={this.switchGrid} />
       </div>
     );
   }

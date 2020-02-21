@@ -6,3 +6,9 @@
   color: #cccccc;
   font-family: 'Roboto Mono', monospace;
 }
+
+.select{
+  background: rgba(200, 200, 200, 255);
+  font-family: 'Roboto Mono', monospace;
+  padding: 3px 10px 3px 10px;
+}
