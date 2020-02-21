@@ -2,9 +2,15 @@ import React from 'react';
 import styles from "./grid.css";
 
 const GridBlock = ({data}) => {
-  return (
-    <span>{data} </span>
-  );
+  if (data === 0) {
+    return (
+      <div className={styles.grid_block_0}></div>
+    );
+  } else {
+    return (
+      <div className={styles.grid_block_1}></div>
+    );
+  }
 }
 
 const GridRow = ({gridRowData}) => {
@@ -15,24 +21,26 @@ const GridRow = ({gridRowData}) => {
   });
 
   return (
-    <li>
+    <div className={styles.grid_container}>
       {gridRowItems}
-    </li>
+    </div>
   );
 }
 
 const Grid = ({gridSize, gridData}) => {
-  // console.log(gridData);
   const gridItems = gridData.map((data) => {
     return (
-      <GridRow gridRowData={data} />
+      <div>
+        <GridRow gridRowData={data} />
+      </div>
     );
   });
 
   return (
-    <ul>
-      {gridItems}
-    </ul>
+    <div>
+        {gridItems}
+        <br />
+    </div>
   );
 }
 

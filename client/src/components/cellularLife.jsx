@@ -28,19 +28,23 @@ class CellularLife extends React.Component {
       data.push(rowData);
     }
 
-    // data[1][1] = 1;
-    // data[1][2] = 1;
-    // data[1][3] = 1;
-    // data[2][0] = 1;
-    // data[2][1] = 1;
-    // data[2][2] = 1;
+    data[1][1] = 1;
+    data[1][2] = 1;
+    data[1][3] = 1;
+    data[2][0] = 1;
+    data[2][1] = 1;
+    data[2][2] = 1;
 
-    data[0][0] = 1;
-    data[0][1] = 1;
-    data[1][0] = 1;
-    data[2][3] = 1;
-    data[3][2] = 1;
-    data[3][3] = 1;
+    // data[0][0] = 1;
+    // data[0][1] = 1;
+    // data[1][0] = 1;
+    // data[2][3] = 1;
+    // data[3][2] = 1;
+    // data[3][3] = 1;
+
+    // data[0][1] = 1;
+    // data[1][1] = 1;
+    // data[2][1] = 1;
 
     this.setState({
       gridData: data
