@@ -1,16 +1,6 @@
 .grid_container {
   display: grid;
-  /* grid-gap: 5px;
-  box-sizing: border-box;
-  height: 200px;
-  width: 200px; */
-  /* padding: 10px;
-  grid-template-columns: 50px;
-  grid-template-rows: 50px;
-} */
-
   grid-template-columns: 50px 50px 50px 50px;
-  /* height: 50px; */
 }
 
 .grid_block_0 {

@@ -11,7 +11,8 @@ class CellularLife extends React.Component {
     super(props);
     this.state = {
       gridSize: 4,
-      gridData: []
+      gridData: [],
+      selectedBase: 0
     }
     this.resetGrid = this.resetGrid.bind(this);
     this.iterateGrid = this.iterateGrid.bind(this);
