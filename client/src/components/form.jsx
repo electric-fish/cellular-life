@@ -20,9 +20,9 @@ class Form extends React.Component {
         <div>
           <label>Form: </label>
           <select id="startOptions" className={styles.select} onChange={this.props.switchGrid}>
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
+            <option value="0">Toad</option>
+            <option value="1">Blinker</option>
+            <option value="2">Beacon</option>
           </select>
         </div>
       </div>
